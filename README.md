@@ -6,7 +6,7 @@
 
 它把“职业选择、素材提取、评分映射、报告写作、逐页展示、现场陈述”串成一次对话。AI 应先交付可用内容，再指出最关键的事实与证据缺口；每项能力主张都要能回到学生本人做过的事。
 
-**当前版本：v0.1.0，适用第四届规则（2026 年 10 月核对）。**重点完成**成长赛道内容制作**。项目独立于赛事主办方；“国赛金奖强度”在这里指内容质量目标，不是获奖保证。
+**当前版本：v0.2.0，适用第四届规则（2026 年 10 月核对）。**重点完成**成长赛道内容制作与报告排版**。项目独立于赛事主办方；“国赛金奖强度”在这里指内容质量目标，不是获奖保证。
 
 ## 它能做什么
 
@@ -16,6 +16,7 @@
 | 职业定位 | 兴趣、课程、项目、想服务的人群 | 比较具体岗位，形成可调研的职业目标与能力画像 |
 | 证据整理 | 成绩、作品、实验、竞赛、实习、志愿服务、反馈 | “岗位要求—本人行动—阶段结果—证明材料”证据链 |
 | 生涯发展报告 | 已有故事、零散履历、草稿或证明材料 | 按三部分结构直接写正文，标出关键待核事实 |
+| Word 报告排版 | 已确定的报告正文或现有 DOCX | 清晰的标题层级、自然分页、必要的证据对照与可编辑 Word 文件 |
 | 展示 PPT 内容 | 报告底稿、图片与作品线索 | 内置 24 页结构的逐页选材、文案、证据和讲述重点 |
 | 现场表达 | 报告、PPT 和证明材料 | 7 分钟陈述思路、问答要点与事实一致性检查 |
 
@@ -33,22 +34,27 @@
 
 ## 安装
 
-将 `skills/` 下的两个文件夹复制到 Codex 的 Skills 目录：
+将 `skills/` 下的三个文件夹复制到 Codex 的 Skills 目录：
 
 ```text
 ~/.codex/skills/
 ├── career-competition-guide/
 │   └── SKILL.md
-└── career-growth-content/
+├── career-growth-content/
+│   ├── SKILL.md
+│   └── references/
+└── career-report-layout/
     ├── SKILL.md
-    └── references/
+    ├── assets/
+    ├── references/
+    └── scripts/
 ```
 
-Windows 默认位置为 `%USERPROFILE%\.codex\skills\`；如果设置了 `CODEX_HOME`，使用其中的 `skills` 目录。重新打开会话后，可直接用自然语言提出任务，也可显式调用 `$career-competition-guide` 或 `$career-growth-content`。
+Windows 默认位置为 `%USERPROFILE%\.codex\skills\`；如果设置了 `CODEX_HOME`，使用其中的 `skills` 目录。重新打开会话后，可直接用自然语言提出任务，也可显式调用 `$career-competition-guide`、`$career-growth-content` 或 `$career-report-layout`。
 
-下载 ZIP 的用户先解压，再复制其中 `skills/` 下的两个完整文件夹。开发者可运行 `python scripts/validate_package.py` 校验引用，并用 `python scripts/build_package.py --version 0.1.0` 生成发布包。
+下载 ZIP 的用户先解压，再复制其中 `skills/` 下的三个完整文件夹。开发者可运行 `python scripts/validate_package.py` 校验引用，并用 `python scripts/build_package.py --version 0.2.0` 生成发布包。
 
-## 三种直接用法
+## 四种直接用法
 
 **从零开始**
 
@@ -62,13 +68,17 @@ Windows 默认位置为 `%USERPROFILE%\.codex\skills\`；如果设置了 `CODEX_
 
 > 报告已经完成。请按内置 24 页结构，先给我 1.1 到 2.5 每页能放什么、优先用哪项真实材料，再写可直接放进 PPT 的文案。
 
+**制作可编辑 Word 报告**
+
+> 这是我的成长赛道报告正文。请保持内容事实不变，用 `$career-report-layout` 排成正式 Word，逐页检查标题、证据表和分页。
+
 学生可以上传现成简历、报告、截图、证书或直接讲故事，无需先填写完整问卷。已提供的信息应被继续使用。
 
 ## 当前范围
 
-- **已完成**：参赛入口分流；第四届成长赛道规则映射；成长赛道报告、24 页展示内容和陈述内容的写作引导；24 个职业的研究起点。
+- **已完成**：参赛入口分流；第四届成长赛道规则映射；成长赛道报告、24 页展示内容和陈述内容的写作引导；24 个职业的研究起点；生涯发展报告的 Word 排版技能。
 - **尚未做成独立 Skill**：就业赛道的简历、求职综合展示和辅助证明材料的完整内容工作流。入口 Skill 可以识别就业赛道并说明当届材料要求，但不能把它描述为已完成的就业模块。
-- **内容优先**：这套 Skills 负责论证、故事、证据和逐页文案；实际排版、DOCX/PDF/PPTX 文件生成取决于调用环境中的相应工具。
+- **内容与排版分工**：内容 Skill 负责论证、故事和证据；排版 Skill 负责 Word 的层级、分页和页面检查。正式提交的报告仍须导出 PDF，并核查字数、图表数量与文件大小。PPTX 文件生成取决于调用环境中的相应工具。
 
 内置 24 页 PPT 结构是本项目的内容模板，**不是官方规定的页数**。学生已有其他结构时，Skill 应依照其要求调整。职业库、标杆人物和代表性单位也不是官方任职标准；正式成稿前，应核对目标地区和岗位层级的近期招聘、职业标准或访谈来源。
 
@@ -77,15 +87,19 @@ Windows 默认位置为 `%USERPROFILE%\.codex\skills\`；如果设置了 `CODEX_
 ```text
 skills/
 ├── career-competition-guide/       # 学生入口与赛道分流
-└── career-growth-content/           # 成长赛道内容制作
-    └── references/
-        ├── rubric.md                # 第四届评分与提交要求
-        ├── report-template.md       # 三部分报告结构
-        ├── material-checklist.md    # 可补充的个人证据
-        ├── ppt-structure.md         # 24 页叙事结构
-        ├── ppt-page-menu.md         # 每页可选内容及优先组合
-        ├── ppt-page-intake.md       # 每页向学生追问的事实
-        └── career-library/          # 24 个职业及技能、人物、单位索引
+├── career-growth-content/           # 成长赛道内容制作
+│   └── references/
+│       ├── rubric.md                # 第四届评分与提交要求
+│       ├── report-template.md       # 三部分报告结构
+│       ├── material-checklist.md    # 可补充的个人证据
+│       ├── ppt-structure.md         # 24 页叙事结构
+│       ├── ppt-page-menu.md         # 每页可选内容及优先组合
+│       ├── ppt-page-intake.md       # 每页向学生追问的事实
+│       └── career-library/          # 24 个职业及技能、人物、单位索引
+└── career-report-layout/            # Word 报告排版与复核
+    ├── assets/evidence-summary-example.json
+    ├── references/layout-spec.md
+    └── scripts/restyle_report.py
 ```
 
 ## 规则、来源与更新
@@ -97,6 +111,10 @@ skills/
 ## 项目海报
 
 [查看课程内容介绍海报](media/career-skills-poster.png)（2160 × 4160 PNG）或打开[可编辑的 HTML 源稿](media/career-skills-poster.html)。海报按六个内容模块展示成长赛道从参赛定位到陈述答辩的制作路径；24 页展示结构是项目模板，并非官方页数要求。
+
+## Word 排版示范
+
+[查看虚构选手的排版示范 Word](examples/growth-report-layout-demo.docx)。它展示标题层级、两页结构与证据对照表；其中的成绩、访谈和项目数据均为虚构，不能只替换姓名后提交。最终 PDF 的实际页面效果须在导出后再次检查。
 
 ## 参与共建
 

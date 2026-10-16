@@ -15,4 +15,4 @@
 - 不提交可识别学生的简历、证书、联系方式或未经授权的案例原件。
 - 保持 `SKILL.md` 简洁，把页级模板、职业数据和示范稿放在对应的 `references/` 中，并检查引用路径。
 
-提交前运行 `python scripts/validate_package.py` 检查两个 Skill 的入口信息、Markdown 链接与本机绝对路径。若本机装有 `PyYAML`，也可运行 `skill-creator` 的 `quick_validate.py` 分别验证两个 Skill。报告问题时附上可匿名复现的学生请求和实际输出。
+提交前运行 `python scripts/validate_package.py` 检查三个 Skill 的入口信息、Markdown 链接与本机绝对路径。若本机装有 `PyYAML`，也可运行 `skill-creator` 的 `quick_validate.py` 分别验证三个 Skill。报告问题时附上可匿名复现的学生请求和实际输出。修改排版脚本时，另需打开实际生成的 Word 或 PDF 检查每一页。

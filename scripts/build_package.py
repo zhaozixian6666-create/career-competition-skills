@@ -13,7 +13,7 @@ DOCUMENTS = [
     "第四届大赛规则基线.md",
     "历届资料索引与变化.md",
 ]
-DIRECTORIES = ["skills", "media", "scripts"]
+DIRECTORIES = ["skills", "media", "scripts", "examples"]
 
 
 def build(version: str) -> Path:
@@ -48,6 +48,6 @@ def build(version: str) -> Path:
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--version", default="0.1.0")
+    parser.add_argument("--version", default="0.2.0")
     args = parser.parse_args()
     print(build(args.version))
