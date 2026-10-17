@@ -1,21 +1,22 @@
-MIT License
+# NexusAI 子贤学长非商业许可 1.0
 
-Copyright (c) 2026 Career Competition Skills contributors
+版权所有 (c) 2026 NexusAI 子贤学长。保留所有未明确授予的权利。
+联系方式：HZCK717
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+本许可适用于本仓库及其发布压缩包中的原创 Skill 指令、参考文档、示范内容、图片、代码和其他原创材料（以下统称“本作品”）。第三方材料、外部链接及官方文件不属于本许可的授权范围。
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+## 允许的使用
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+在遵守下述条件的前提下，允许个人学习、研究、非商业参赛准备和非商业教学使用本作品；允许为这些目的复制、修改和分享本作品。分享原版或修改版时，必须保留本许可全文、出品署名和联系方式，并清楚标明所作修改。
+
+## 禁止的使用
+
+禁止一切商用，即禁止一切商业使用，无论是否直接向使用者收费。包括但不限于：销售或转售本作品；用于付费课程、培训、咨询、代写、陪跑或其他服务交付；作为商业产品、平台、软件或机构服务的一部分；以本作品进行商业推广、广告引流或获客；以及企业或个人为营利性经营活动进行的内部或对外使用。不得向他人授予超出本许可的权利。
+
+未经权利人另行明确书面授权，不得删除或掩盖“NexusAI 子贤学长出品”及“联系方式 HZCK717”的来源标识。将 Skill 安装后用于生成学生个人参赛材料时，来源标识不必自动写入学生作品；本条针对本作品及其再分发版本。
+
+违反上述条件时，本许可授予的使用权自动终止。权利人可依据适用法律主张权利。
+
+本作品按现状提供，不作适销性、特定用途适用性或不侵权的保证。在法律允许的范围内，权利人不承担因使用本作品产生的损失。
+
+本许可自 v0.3.0 起适用。此前已按 MIT 许可证发布的版本，其既有授权不因本次变更而撤销。
