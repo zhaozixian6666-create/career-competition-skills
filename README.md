@@ -54,7 +54,7 @@
 
 Windows 默认位置为 `%USERPROFILE%\.codex\skills\`；如果设置了 `CODEX_HOME`，使用其中的 `skills` 目录。重新打开会话后，可直接用自然语言提出任务，也可显式调用 `$career-competition-guide`、`$career-growth-content` 或 `$career-report-layout`。
 
-下载 ZIP 的用户先解压，再复制其中 `skills/` 下的三个完整文件夹。开发者可运行 `python scripts/validate_package.py` 校验引用，并用 `python scripts/build_package.py --version 0.3.0` 生成发布包。
+[下载 v0.3.0 完整 Skill 压缩包](https://github.com/zhaozixian6666-create/career-competition-skills/raw/refs/heads/main/dist/career-competition-skills-v0.3.0.zip)。解压后复制其中 `skills/` 下的三个完整文件夹。开发者可运行 `python scripts/validate_package.py` 校验引用，并用 `python scripts/build_package.py --version 0.3.0` 生成发布包。
 
 ## 四种直接用法
 
