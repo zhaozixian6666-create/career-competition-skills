@@ -49,6 +49,6 @@ def build(version: str) -> Path:
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--version", default="0.3.0")
+    parser.add_argument("--version", default="0.3.1")
     args = parser.parse_args()
     print(build(args.version))

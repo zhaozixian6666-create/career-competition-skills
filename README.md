@@ -8,7 +8,7 @@
 
 它把“职业选择、素材提取、评分映射、报告写作、逐页展示、现场陈述”串成一次对话。AI 应先交付可用内容，再指出最关键的事实与证据缺口；每项能力主张都要能回到学生本人做过的事。
 
-**当前版本：v0.3.0，适用第四届规则（2026 年 10 月核对）。**重点完成**成长赛道内容制作与报告排版**。项目独立于赛事主办方；“国赛金奖强度”在这里指内容质量目标，不是获奖保证。
+**当前版本：v0.3.1，适用第四届规则（2026 年 10 月核对）。**重点完成**成长赛道内容制作与报告排版**。项目独立于赛事主办方；“国赛金奖强度”在这里指内容质量目标，不是获奖保证。
 
 ## 它能做什么
 
@@ -32,7 +32,7 @@
 目标依据 → 岗位要求与个人差距 → 已做的学习实践 → 本人贡献与成果 → 反馈、调整与再次行动
 ```
 
-这让报告、PPT 和答辩共享同一套事实。奖项、证书、实习证明、项目照片或播放量都可以成为材料，但必须说明它证明了什么、学生本人做了什么。缺少个人事实时，Skill 会写出可写的岗位分析并标注待补点；完整的虚构故事只作为明确标注的示范，不可仅改姓名后提交。
+这让报告、PPT 和答辩共享同一套事实。报告还会把岗位拆成工作任务、方法、交付物和评价标准，要求至少写透一次专业判断与项目改进。奖项、证书、实习证明、项目照片或播放量都可以成为材料，但必须说明它证明了什么、学生本人做了什么。缺少个人事实时，Skill 会写出可写的岗位分析并标注待补点；完整的虚构故事只作为明确标注的示范，不可仅改姓名后提交。
 
 ## 安装
 
@@ -54,7 +54,7 @@
 
 Windows 默认位置为 `%USERPROFILE%\.codex\skills\`；如果设置了 `CODEX_HOME`，使用其中的 `skills` 目录。重新打开会话后，可直接用自然语言提出任务，也可显式调用 `$career-competition-guide`、`$career-growth-content` 或 `$career-report-layout`。
 
-[下载 v0.3.0 完整 Skill 压缩包](https://github.com/zhaozixian6666-create/career-competition-skills/raw/refs/heads/main/dist/career-competition-skills-v0.3.0.zip)。解压后复制其中 `skills/` 下的三个完整文件夹。开发者可运行 `python scripts/validate_package.py` 校验引用，并用 `python scripts/build_package.py --version 0.3.0` 生成发布包。
+[下载 v0.3.1 完整 Skill 压缩包](https://github.com/zhaozixian6666-create/career-competition-skills/raw/refs/heads/main/dist/career-competition-skills-v0.3.1.zip)。解压后复制其中 `skills/` 下的三个完整文件夹。开发者可运行 `python scripts/validate_package.py` 校验引用，并用 `python scripts/build_package.py --version 0.3.1` 生成发布包。
 
 ## 四种直接用法
 
