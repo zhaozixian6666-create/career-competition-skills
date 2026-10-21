@@ -8,6 +8,7 @@ import argparse
 ROOT = Path(__file__).resolve().parent.parent
 DOCUMENTS = [
     "README.md",
+    "使用指南-学生版.md",
     "LICENSE",
     "CONTRIBUTING.md",
     "第四届大赛规则基线.md",
@@ -49,6 +50,6 @@ def build(version: str) -> Path:
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--version", default="0.3.1")
+    parser.add_argument("--version", default="0.3.2")
     args = parser.parse_args()
     print(build(args.version))

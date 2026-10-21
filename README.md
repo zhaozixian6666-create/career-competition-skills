@@ -8,7 +8,7 @@
 
 它把“职业选择、素材提取、评分映射、报告写作、逐页展示、现场陈述”串成一次对话。AI 应先交付可用内容，再指出最关键的事实与证据缺口；每项能力主张都要能回到学生本人做过的事。
 
-**当前版本：v0.3.1，适用第四届规则（2026 年 10 月核对）。**重点完成**成长赛道内容制作与报告排版**。项目独立于赛事主办方；“国赛金奖强度”在这里指内容质量目标，不是获奖保证。
+**当前版本：v0.3.2，适用第四届规则（2026 年 10 月核对）。**重点完成**成长赛道内容制作与报告排版**。项目独立于赛事主办方；“国赛金奖强度”在这里指内容质量目标，不是获奖保证。
 
 ## 它能做什么
 
@@ -36,6 +36,8 @@
 
 ## 安装
 
+第一次使用可以先读[学弟学妹使用指南](使用指南-学生版.md)，按“安装、讲经历、做报告、再做 PPT”的顺序操作。
+
 将 `skills/` 下的三个文件夹复制到 Codex 的 Skills 目录：
 
 ```text
@@ -54,7 +56,7 @@
 
 Windows 默认位置为 `%USERPROFILE%\.codex\skills\`；如果设置了 `CODEX_HOME`，使用其中的 `skills` 目录。重新打开会话后，可直接用自然语言提出任务，也可显式调用 `$career-competition-guide`、`$career-growth-content` 或 `$career-report-layout`。
 
-[下载 v0.3.1 完整 Skill 压缩包](https://github.com/zhaozixian6666-create/career-competition-skills/raw/refs/heads/main/dist/career-competition-skills-v0.3.1.zip)。解压后复制其中 `skills/` 下的三个完整文件夹。开发者可运行 `python scripts/validate_package.py` 校验引用，并用 `python scripts/build_package.py --version 0.3.1` 生成发布包。
+[下载 v0.3.2 完整 Skill 压缩包](https://github.com/zhaozixian6666-create/career-competition-skills/raw/refs/heads/main/dist/career-competition-skills-v0.3.2.zip)。解压后复制其中 `skills/` 下的三个完整文件夹；压缩包内附学生版使用指南。开发者可运行 `python scripts/validate_package.py` 校验引用，并用 `python scripts/build_package.py --version 0.3.2` 生成发布包。
 
 ## 四种直接用法
 
