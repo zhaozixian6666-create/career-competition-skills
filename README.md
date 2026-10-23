@@ -8,7 +8,7 @@
 
 它把“职业选择、素材提取、评分映射、报告写作、逐页展示、现场陈述”串成一次对话。AI 应先交付可用内容，再指出最关键的事实与证据缺口；每项能力主张都要能回到学生本人做过的事。
 
-**当前版本：v0.3.2，适用第四届规则（2026 年 10 月核对）。**重点完成**成长赛道内容制作与报告排版**。项目独立于赛事主办方；“国赛金奖强度”在这里指内容质量目标，不是获奖保证。
+**当前版本：v0.4.0，适用第四届规则（2026 年 10 月核对）。**已覆盖**成长赛道内容与报告排版、就业赛道展示 PPT 内容**。项目独立于赛事主办方；“国赛金奖强度”在这里指内容质量目标，不是获奖保证。
 
 ## 它能做什么
 
@@ -21,6 +21,7 @@
 | Word 报告排版 | 已确定的报告正文或现有 DOCX | 清晰的标题层级、自然分页、必要的证据对照与可编辑 Word 文件 |
 | 展示 PPT 内容 | 报告底稿、图片与作品线索 | 内置 24 页结构的逐页选材、文案、证据和讲述重点 |
 | 现场表达 | 报告、PPT 和证明材料 | 7 分钟陈述思路、问答要点与事实一致性检查 |
+| 就业赛道展示 PPT | 目标岗位 JD、简历、项目与实习证据 | 按岗位要求组织逐页文案、证据和 6 分钟讲述重点 |
 
 职业选择库现收录 **24 个代表性岗位**，覆盖机械与新工科、新医科、新文科、人工智能、社区和公益。每个方向都从典型任务、关键技能、可验证行动出发；人物和单位是进一步调研的线索，不是实时招聘或入职承诺。
 
@@ -38,7 +39,7 @@
 
 第一次使用可以先读[学弟学妹使用指南](使用指南-学生版.md)，按“安装、讲经历、做报告、再做 PPT”的顺序操作。
 
-将 `skills/` 下的三个文件夹复制到 Codex 的 Skills 目录：
+将 `skills/` 下的四个文件夹复制到 Codex 的 Skills 目录：
 
 ```text
 ~/.codex/skills/
@@ -47,6 +48,10 @@
 ├── career-growth-content/
 │   ├── SKILL.md
 │   └── references/
+├── career-employment-ppt/
+│   ├── SKILL.md
+│   ├── references/
+│   └── assets/
 └── career-report-layout/
     ├── SKILL.md
     ├── assets/
@@ -54,9 +59,9 @@
     └── scripts/
 ```
 
-Windows 默认位置为 `%USERPROFILE%\.codex\skills\`；如果设置了 `CODEX_HOME`，使用其中的 `skills` 目录。重新打开会话后，可直接用自然语言提出任务，也可显式调用 `$career-competition-guide`、`$career-growth-content` 或 `$career-report-layout`。
+Windows 默认位置为 `%USERPROFILE%\.codex\skills\`；如果设置了 `CODEX_HOME`，使用其中的 `skills` 目录。重新打开会话后，可直接用自然语言提出任务，也可显式调用 `$career-competition-guide`、`$career-growth-content`、`$career-employment-ppt` 或 `$career-report-layout`。
 
-[下载 v0.3.2 完整 Skill 压缩包](https://github.com/zhaozixian6666-create/career-competition-skills/raw/refs/heads/main/dist/career-competition-skills-v0.3.2.zip)。解压后复制其中 `skills/` 下的三个完整文件夹；压缩包内附学生版使用指南。开发者可运行 `python scripts/validate_package.py` 校验引用，并用 `python scripts/build_package.py --version 0.3.2` 生成发布包。
+[下载 v0.4.0 完整 Skill 压缩包](https://github.com/zhaozixian6666-create/career-competition-skills/raw/refs/heads/main/dist/career-competition-skills-v0.4.0.zip)。解压后复制其中 `skills/` 下的四个完整文件夹；压缩包内附学生版使用指南。开发者可运行 `python scripts/validate_package.py` 校验引用，并用 `python scripts/build_package.py --version 0.4.0` 生成发布包。
 
 ## 四种直接用法
 
@@ -76,15 +81,19 @@ Windows 默认位置为 `%USERPROFILE%\.codex\skills\`；如果设置了 `CODEX_
 
 > 这是我的成长赛道报告正文。请保持内容事实不变，用 `$career-report-layout` 排成正式 Word，逐页检查标题、证据表和分页。
 
+**就业赛道求职展示**
+
+> 我参加就业赛道，目标是某地区的具体入门岗位。这是我的简历、目标企业 JD、项目与实习材料。请使用 `$career-employment-ppt`，选出 6 分钟内最有说服力的页序，直接写每页文案、本人证据和讲述要点；没有证据的地方标明待补。
+
 学生可以上传现成简历、报告、截图、证书或直接讲故事，无需先填写完整问卷。已提供的信息应被继续使用。
 
 ## 当前范围
 
-- **已完成**：参赛入口分流；第四届成长赛道规则映射；成长赛道报告、24 页展示内容和陈述内容的写作引导；24 个职业的研究起点；生涯发展报告的 Word 排版技能。
-- **尚未做成独立 Skill**：就业赛道的简历、求职综合展示和辅助证明材料的完整内容工作流。入口 Skill 可以识别就业赛道并说明当届材料要求，但不能把它描述为已完成的就业模块。
+- **已完成**：参赛入口分流；第四届成长赛道报告、展示与陈述内容；24 个职业的研究起点；生涯发展报告 Word 排版；就业赛道求职综合展示 PPT 的逐页内容指引及 Word 参考稿。
+- **尚未做成独立 Skill**：就业赛道求职简历与辅助证明材料的完整制作工作流。就业展示模块可读取这些材料、核对事实并形成 PPT，不代表简历与证明文件已自动完成。
 - **内容与排版分工**：内容 Skill 负责论证、故事和证据；排版 Skill 负责 Word 的层级、分页和页面检查。正式提交的报告仍须导出 PDF，并核查字数、图表数量与文件大小。PPTX 文件生成取决于调用环境中的相应工具。
 
-内置 24 页 PPT 结构是本项目的内容模板，**不是官方规定的页数**。学生已有其他结构时，Skill 应依照其要求调整。职业库、标杆人物和代表性单位也不是官方任职标准；正式成稿前，应核对目标地区和岗位层级的近期招聘、职业标准或访谈来源。
+内置成长赛道 24 页和就业赛道 P1–P28 PPT 结构均为本项目的内容素材库，**不是官方规定的页数**。就业赛道另有 P29–P30 制作附录，正式提交前删除；6 分钟陈述需按证据强弱压缩展示。学生已有其他结构时，Skill 应依照其要求调整。职业库、标杆人物和代表性单位也不是官方任职标准；正式成稿前，应核对目标地区和岗位层级的近期招聘、职业标准或访谈来源。
 
 ## 目录
 
@@ -100,6 +109,10 @@ skills/
 │       ├── ppt-page-menu.md         # 每页可选内容及优先组合
 │       ├── ppt-page-intake.md       # 每页向学生追问的事实
 │       └── career-library/          # 24 个职业及技能、人物、单位索引
+├── career-employment-ppt/            # 就业赛道展示 PPT 逐页内容
+│   ├── references/page-logic.md      # P1–P30 选材与证据
+│   ├── references/rubric.md          # 第四届就业赛道规则
+│   └── assets/                       # 逐页内容逻辑 Word 参考稿
 └── career-report-layout/            # Word 报告排版与复核
     ├── assets/evidence-summary-example.json
     ├── references/layout-spec.md
